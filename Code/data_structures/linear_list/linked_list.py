@@ -10,10 +10,16 @@ class SinglyLinkedListNode(object):
         self.next = None
 
     def __str__(self):
-        return "\nself:{0}-value:{1}-next:{2}".format(id(self), self.value, id(self.next))
+        self_id = 0
+        if self is not None:
+            self_id = id(self)
+        self_next_id = 0
+        if self.next is not None:
+            self_next_id = id(self.next)
+        return "\nself:{0}-value:{1}-next:{2}".format(self_id, self.value, self_next_id)
 
     def __repr__(self):
-        return "\nself:{0}-value:{1}-next:{2}".format(id(self), self.value, id(self.next))
+        return self.__str__()
 
 
 class SinglyLinkedList(AbstractLinearList):
