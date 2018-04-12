@@ -2,4 +2,4 @@
 # -*- coding: utf-8 -*-
 
 if __name__ == '__main__':
-    pass
+    print('run main linked_list.py')
