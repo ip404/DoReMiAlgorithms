@@ -6,6 +6,13 @@ Some examples of data structures and algorithms implemented in Python.
 
 Python 3.5.1
 
+# Data Structures
+
+- linear list
+    - linked list
+        - singly linked list
+        - doubly linked list
+
 # Help
 
 - [pythontutor.com](http://www.pythontutor.com/)
