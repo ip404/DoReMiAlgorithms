@@ -16,7 +16,7 @@ class SinglyLinkedListNode(object):
         self_next_id = 0
         if self.next is not None:
             self_next_id = id(self.next)
-        return "\nself:{0}-value:{1}-next:{2}".format(self_id, self.value, self_next_id)
+        return "\nself:{0}_value:{1}_next:{2}".format(self_id, self.value, self_next_id)
 
     def __repr__(self):
         return self.__str__()
@@ -145,7 +145,21 @@ class DoublyLinkedListNode(object):
         self.value = value
         self.previous = None
         self.next = None
-    # TODO __str__
+
+    def __str__(self):
+        previous_id = 0
+        if self.previous is not None:
+            previous_id = id(self.previous)
+        self_id = 0
+        if self is not None:
+            self_id = id(self)
+        next_id = 0
+        if self.next is not None:
+            next_id = id(self.next)
+        return "\nprevious:{0}_self:{1}_value:{2}_next:{3}".format(previous_id, self_id, self.value, next_id)
+
+    def __repr__(self):
+        return self.__str__()
 
 
 class DoublyLinkedList(AbstractLinearList):
