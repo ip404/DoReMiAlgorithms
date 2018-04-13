@@ -92,7 +92,7 @@ class SinglyLinkedListTestCase(unittest.TestCase):
 
     @staticmethod
     def test_element_at_index():
-        singly_list = SinglyLinkedList(name='singly list get')
+        singly_list = SinglyLinkedList(name='singly list get element')
         # print(singly_list.element_at_index(0))
         singly_list.append_element('g')
         singly_list.append_element('e')
@@ -102,6 +102,20 @@ class SinglyLinkedListTestCase(unittest.TestCase):
         print(singly_list.element_at_index(2))
         # print(singly_list.element_at_index(3))
 
+    @staticmethod
+    def test_index_of_element():
+        print('index of element test ------------------------')
+        singly_list = SinglyLinkedList(name='singly list get index')
+        singly_list.append_element('g')
+        singly_list.append_element('e')
+        singly_list.append_element('t')
+        singly_list.append_element('i')
+        singly_list.append_element('n')
+        print(singly_list.index_of_element('g'))
+        print(singly_list.index_of_element('t'))
+        print(singly_list.index_of_element('n'))
+        print(singly_list.index_of_element('not exist'))
+        print(singly_list.index_of_element(None))
 
 if __name__ == "__main__":
     unittest.main()

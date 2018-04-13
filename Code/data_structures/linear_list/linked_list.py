@@ -115,7 +115,17 @@ class SinglyLinkedList(AbstractLinearList):
             return next_node.value
 
     def index_of_element(self, element):
-        pass
+        if element is None:
+            # not exist
+            return -1
+        temp_index = 0
+        next_node = self.header_node
+        while next_node.next is not None:
+            next_node = next_node.next
+            if next_node.value is element:
+                return temp_index
+            temp_index += 1
+        return -1
 
     def length(self):
         return self.header_node.value
