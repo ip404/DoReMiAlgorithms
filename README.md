@@ -1,4 +1,4 @@
-# DoReMiAlgorithms [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/ip404/DoReMiAlgorithms) ![Python](https://img.shields.io/badge/Python-3.5.1-blue.svg)
+# DoReMiAlgorithms [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/ip404/DoReMiAlgorithms) [![Python](https://img.shields.io/badge/Python-3.5.1-blue.svg)](https://www.python.org/)
 
 Some examples of data structures and algorithms implemented in Python.
 
