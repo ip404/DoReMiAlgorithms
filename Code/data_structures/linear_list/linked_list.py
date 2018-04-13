@@ -81,7 +81,15 @@ class SinglyLinkedList(AbstractLinearList):
         self.header_node.value = 0
 
     def update_element_at_index(self, element, index):
-        pass
+        if index >= self.length():
+            raise Exception('index out of singly list range')
+        else:
+            temp_index = 0
+            next_node = self.header_node.next
+            while temp_index < index:
+                temp_index += 1
+                next_node = next_node.next
+            next_node.value = element
 
     def first(self):
         return self.header_node.next.value
@@ -90,7 +98,14 @@ class SinglyLinkedList(AbstractLinearList):
         pass
 
     def element_at_index(self, index):
-        pass
+        if index >= self.length():
+            raise Exception('index out of singly list range')
+        else:
+            temp_index = 0
+            next_node = self.header_node.next
+            while temp_index < index:
+                next_node = next_node.next
+            return next_node.next.value
 
     def index_of_element(self, element):
         pass

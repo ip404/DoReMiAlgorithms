@@ -67,6 +67,18 @@ class SinglyLinkedListTestCase(unittest.TestCase):
         singly_list_c.remove_element_at_index(2)
         singly_list_c.print_all_element()
 
+    @staticmethod
+    def test_update_element_at_index():
+        singly_list = SinglyLinkedList(name='singly list update')
+        singly_list.append_element('e')
+        singly_list.append_element('t')
+        singly_list.append_element('a')
+        singly_list.update_element_at_index('d', 2)
+        singly_list.print_all_element()
+        singly_list.update_element_at_index('u', 0)
+        singly_list.print_all_element()
+        singly_list.update_element_at_index('p', 1)
+        singly_list.print_all_element()
 
 
 if __name__ == "__main__":
