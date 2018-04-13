@@ -90,17 +90,17 @@ class SinglyLinkedListTestCase(unittest.TestCase):
         singly_list.append_element('s')
         print(singly_list.last())
 
-    # @staticmethod
-    # def test_element_at_index():
-    #     singly_list = SinglyLinkedList(name='singly list get')
-    #     print(singly_list.element_at_index(0))
-    #     singly_list.append_element('g')
-    #     singly_list.append_element('e')
-    #     singly_list.append_element('t')
-    #     singly_list.element_at_index(0)
-    #     singly_list.element_at_index(1)
-    #     singly_list.element_at_index(2)
-    #     singly_list.element_at_index(3)
+    @staticmethod
+    def test_element_at_index():
+        singly_list = SinglyLinkedList(name='singly list get')
+        # print(singly_list.element_at_index(0))
+        singly_list.append_element('g')
+        singly_list.append_element('e')
+        singly_list.append_element('t')
+        print(singly_list.element_at_index(0))
+        print(singly_list.element_at_index(1))
+        print(singly_list.element_at_index(2))
+        # print(singly_list.element_at_index(3))
 
 
 if __name__ == "__main__":

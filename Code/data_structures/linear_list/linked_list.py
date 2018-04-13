@@ -110,8 +110,9 @@ class SinglyLinkedList(AbstractLinearList):
             temp_index = 0
             next_node = self.header_node.next
             while temp_index < index:
+                temp_index += 1
                 next_node = next_node.next
-            return next_node.next.value
+            return next_node.value
 
     def index_of_element(self, element):
         pass
