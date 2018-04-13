@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding:utf-8 -*-
 
 import os
@@ -11,9 +11,9 @@ from Code.data_structures.linear_list.linked_list import SinglyLinkedList
 
 class SinglyLinkedListTestCase(unittest.TestCase):
 
-    # def setUp(self):
-    #     print('setUp')
-    #
+    def setUp(self):
+        print('-----------------------------setUp')
+
     # def tearDown(self):
     #     print('tearDown')
     @staticmethod
@@ -29,6 +29,19 @@ class SinglyLinkedListTestCase(unittest.TestCase):
         singly_list.insert_element_at_index('c', 1)
         singly_list.print_all_element()
         singly_list.insert_element_at_index('d', 2)
+        singly_list.print_all_element()
+
+    @staticmethod
+    def test_append_element():
+        singly_list = SinglyLinkedList(name='singly list')
+        singly_list.print_all_element()
+        singly_list.append_element('a')
+        singly_list.print_all_element()
+        singly_list.append_element('c')
+        singly_list.print_all_element()
+        singly_list.append_element('b')
+        singly_list.print_all_element()
+        singly_list.append_element('f')
         singly_list.print_all_element()
 
 

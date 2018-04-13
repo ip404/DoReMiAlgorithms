@@ -34,9 +34,6 @@ class SinglyLinkedList(AbstractLinearList):
     def __str__(self):
         return "name {0}, circular: {1}".format(self.name, self.is_circular)
 
-    def append_element(self, element):
-        self.insert_element_at_index(element, self.length())
-
     def insert_element_at_index(self, element, index):
         """
         list[index].value = element
@@ -52,7 +49,6 @@ class SinglyLinkedList(AbstractLinearList):
             next_node = self.header_node.next
             previous_node = self.header_node
             while (temp_index < index) and (next_node is not None):
-                print('---------')
                 temp_index += 1
                 previous_node = next_node
                 next_node = next_node.next
@@ -60,6 +56,9 @@ class SinglyLinkedList(AbstractLinearList):
             previous_node.next = node
             node.next = next_node
             self.header_node.value += 1
+
+    def append_element(self, element):
+        self.insert_element_at_index(element, self.length())
 
     def remove_element_at_index(self, index):
         if index == 0:
@@ -115,9 +114,11 @@ class DoublyLinkedListNode(object):
         self.value = value
         self.previous = None
         self.next = None
+    # TODO __str__
 
 
 class DoublyLinkedList(AbstractLinearList):
+    # TODO
     pass
 
 if __name__ == '__main__':

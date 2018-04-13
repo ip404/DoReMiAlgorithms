@@ -13,11 +13,11 @@ class AbstractLinearList(ABC):
         return self.length()
 
     @abstractclassmethod
-    def append_element(self, element):
+    def insert_element_at_index(self, element, index):
         pass
 
     @abstractclassmethod
-    def insert_element_at_index(self, element, index):
+    def append_element(self, element):
         pass
 
     @abstractclassmethod
