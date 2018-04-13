@@ -105,7 +105,7 @@ class SinglyLinkedList(AbstractLinearList):
             element_list.append(next_node)
             next_node = next_node.next
         print('{0}---------------\n {1}'.format(self.name, element_list))
-        del element_list
+        # del element_list
 
 
 class DoublyLinkedListNode(object):
