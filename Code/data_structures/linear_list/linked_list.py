@@ -95,7 +95,13 @@ class SinglyLinkedList(AbstractLinearList):
         return self.header_node.next.value
 
     def last(self):
-        pass
+        if self.length() == 0:
+            return None
+        else:
+            next_node = self.header_node.next
+            while next_node.next is not None:
+                next_node = next_node.next
+            return next_node.value
 
     def element_at_index(self, index):
         if index >= self.length():

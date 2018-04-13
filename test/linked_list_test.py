@@ -12,7 +12,7 @@ from Code.data_structures.linear_list.linked_list import SinglyLinkedList
 class SinglyLinkedListTestCase(unittest.TestCase):
 
     def setUp(self):
-        print('-----------------------------setUp')
+        print('\n-----------------------------setUp')
 
     # def tearDown(self):
     #     print('tearDown')
@@ -79,6 +79,28 @@ class SinglyLinkedListTestCase(unittest.TestCase):
         singly_list.print_all_element()
         singly_list.update_element_at_index('p', 1)
         singly_list.print_all_element()
+
+    @staticmethod
+    def test_last():
+        singly_list = SinglyLinkedList(name='singly list get last')
+        print(singly_list.last())
+        singly_list.append_element('l')
+        print(singly_list.last())
+        singly_list.append_element('a')
+        singly_list.append_element('s')
+        print(singly_list.last())
+
+    # @staticmethod
+    # def test_element_at_index():
+    #     singly_list = SinglyLinkedList(name='singly list get')
+    #     print(singly_list.element_at_index(0))
+    #     singly_list.append_element('g')
+    #     singly_list.append_element('e')
+    #     singly_list.append_element('t')
+    #     singly_list.element_at_index(0)
+    #     singly_list.element_at_index(1)
+    #     singly_list.element_at_index(2)
+    #     singly_list.element_at_index(3)
 
 
 if __name__ == "__main__":
