@@ -43,7 +43,7 @@ class SinglyLinkedList(AbstractLinearList):
         :return:
         """
         if index > self.length():
-            raise Exception('out of list range')
+            raise Exception('index out of singly list range')
         else:
             temp_index = 0
             next_node = self.header_node.next
@@ -61,21 +61,20 @@ class SinglyLinkedList(AbstractLinearList):
         self.insert_element_at_index(element, self.length())
 
     def remove_element_at_index(self, index):
-        if index == 0:
-            pass
-        elif index > self.length():
-            pass
+        if index >= self.length():
+            raise Exception('index out of singly list range')
         else:
-            pass
-        temp_index = 0
-        next_node = self.header_node.next
-        while temp_index < index:
-            temp_index += 1
-            next_node = next_node.next
-        delete_node = next_node.next
-        next_node.next = delete_node.next
-        # del delete_node
-        self.header_node.value -= 1
+            temp_index = 0
+            next_node = self.header_node.next
+            previous_node = self.header_node
+            while temp_index < index:
+                temp_index += 1
+                previous_node = next_node
+                next_node = next_node.next
+            delete_node = next_node
+            previous_node.next = delete_node.next
+            # del delete_node
+            self.header_node.value -= 1
 
     def remove_all_element(self):
         self.header_node.next = None
@@ -105,7 +104,7 @@ class SinglyLinkedList(AbstractLinearList):
         while next_node is not None:
             element_list.append(next_node)
             next_node = next_node.next
-        print(element_list)
+        print('{0}---------------\n {1}'.format(self.name, element_list))
         del element_list
 
 

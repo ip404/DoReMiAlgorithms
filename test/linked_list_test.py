@@ -18,7 +18,7 @@ class SinglyLinkedListTestCase(unittest.TestCase):
     #     print('tearDown')
     @staticmethod
     def test_insert_element_at_index():
-        singly_list = SinglyLinkedList(name='singly list')
+        singly_list = SinglyLinkedList(name='singly list insert')
         singly_list.print_all_element()
         # singly_list.insert_element_at_index('a', 10)
         # singly_list.print_all_element()
@@ -33,7 +33,7 @@ class SinglyLinkedListTestCase(unittest.TestCase):
 
     @staticmethod
     def test_append_element():
-        singly_list = SinglyLinkedList(name='singly list')
+        singly_list = SinglyLinkedList(name='singly list append')
         singly_list.print_all_element()
         singly_list.append_element('a')
         singly_list.print_all_element()
@@ -43,6 +43,30 @@ class SinglyLinkedListTestCase(unittest.TestCase):
         singly_list.print_all_element()
         singly_list.append_element('f')
         singly_list.print_all_element()
+
+    @staticmethod
+    def test_remove_element_at_index():
+        singly_list_a = SinglyLinkedList(name='singly list remove first')
+        singly_list_a.append_element('j')
+        singly_list_a.append_element('k')
+        singly_list_a.append_element('l')
+        singly_list_a.remove_element_at_index(0)
+        singly_list_a.print_all_element()
+
+        singly_list_b = SinglyLinkedList(name='singly list remove')
+        singly_list_b.append_element('j')
+        singly_list_b.append_element('k')
+        singly_list_b.append_element('l')
+        singly_list_b.remove_element_at_index(1)
+        singly_list_b.print_all_element()
+
+        singly_list_c = SinglyLinkedList(name='singly list remove last')
+        singly_list_c.append_element('j')
+        singly_list_c.append_element('k')
+        singly_list_c.append_element('l')
+        singly_list_c.remove_element_at_index(2)
+        singly_list_c.print_all_element()
+
 
 
 if __name__ == "__main__":
