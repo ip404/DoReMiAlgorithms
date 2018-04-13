@@ -2,10 +2,6 @@
 
 Some examples of data structures and algorithms implemented in Python.
 
-# Python version
-
-Python 3.5.1
-
 # Data structures
 
 - [Linear list](https://github.com/ip404/DoReMiAlgorithms/tree/master/Code/data_structures/linear_list)
