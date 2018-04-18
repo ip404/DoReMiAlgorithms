@@ -106,3 +106,5 @@ ENV/
 .idea
 
 *.js
+
+.vscode

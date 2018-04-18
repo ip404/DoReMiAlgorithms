@@ -3,7 +3,6 @@
 
 import abc
 
-
 class AbstractQueue(abc.ABC):
     pass
 
