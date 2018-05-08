@@ -8,6 +8,7 @@ Some examples of data structures and algorithms implemented in Python.
     - Linked list
         - Singly linked list
         - Doubly linked list
+- Tree
 
 # Help
 
